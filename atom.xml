@@ -3,11 +3,11 @@
   <title>Jason Yang&#39;s Blog</title>
   
   <subtitle>designed by Jason Yang</subtitle>
-  <link href="https://jason-jp-yang.github.io/atom.xml" rel="self"/>
+  <link href="https://jason-jp-yang.github.io/Blog/atom.xml" rel="self"/>
   
-  <link href="https://jason-jp-yang.github.io/"/>
+  <link href="https://jason-jp-yang.github.io/Blog/"/>
   <updated>2024-01-27T00:15:00.000Z</updated>
-  <id>https://jason-jp-yang.github.io/</id>
+  <id>https://jason-jp-yang.github.io/Blog/</id>
   
   <author>
     <name>Jason Yang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Can Hong Kong&#39;s Street Performers Get Some Love ...... and More Mong Kok Busking Space?</title>
-    <link href="https://jason-jp-yang.github.io/2024/01/26/Can%20Hong%20Kong&#39;s%20street%20performers%20get%20some%20love%20...%20and%20more%20Mong%20Kok%20busking%20space/"/>
-    <id>https://jason-jp-yang.github.io/2024/01/26/Can%20Hong%20Kong&#39;s%20street%20performers%20get%20some%20love%20...%20and%20more%20Mong%20Kok%20busking%20space/</id>
+    <link href="https://jason-jp-yang.github.io/Blog/2024/01/26/Can%20Hong%20Kong&#39;s%20street%20performers%20get%20some%20love%20...%20and%20more%20Mong%20Kok%20busking%20space/"/>
+    <id>https://jason-jp-yang.github.io/Blog/2024/01/26/Can%20Hong%20Kong&#39;s%20street%20performers%20get%20some%20love%20...%20and%20more%20Mong%20Kok%20busking%20space/</id>
     <published>2024-01-26T15:00:00.000Z</published>
     <updated>2024-01-27T00:15:00.000Z</updated>
     
@@ -31,25 +31,25 @@ Buskers in Mong Kok have to contend with other acts and throngs of pedestrians. 
     
     
     
-    <category term="News Article" scheme="https://jason-jp-yang.github.io/categories/News-Article/"/>
+    <category term="News Article" scheme="https://jason-jp-yang.github.io/Blog/categories/News-Article/"/>
     
-    <category term="The World Around us" scheme="https://jason-jp-yang.github.io/categories/News-Article/The-World-Around-us/"/>
+    <category term="The World Around us" scheme="https://jason-jp-yang.github.io/Blog/categories/News-Article/The-World-Around-us/"/>
     
     
-    <category term="News Article" scheme="https://jason-jp-yang.github.io/tags/News-Article/"/>
+    <category term="News Article" scheme="https://jason-jp-yang.github.io/Blog/tags/News-Article/"/>
     
-    <category term="The World Around us" scheme="https://jason-jp-yang.github.io/tags/The-World-Around-us/"/>
+    <category term="The World Around us" scheme="https://jason-jp-yang.github.io/Blog/tags/The-World-Around-us/"/>
     
-    <category term="Buskers" scheme="https://jason-jp-yang.github.io/tags/Buskers/"/>
+    <category term="Buskers" scheme="https://jason-jp-yang.github.io/Blog/tags/Buskers/"/>
     
-    <category term="Hong Kong" scheme="https://jason-jp-yang.github.io/tags/Hong-Kong/"/>
+    <category term="Hong Kong" scheme="https://jason-jp-yang.github.io/Blog/tags/Hong-Kong/"/>
     
   </entry>
   
   <entry>
     <title>My First Blog: Hello World</title>
-    <link href="https://jason-jp-yang.github.io/2023/12/23/hello-world/"/>
-    <id>https://jason-jp-yang.github.io/2023/12/23/hello-world/</id>
+    <link href="https://jason-jp-yang.github.io/Blog/2023/12/23/hello-world/"/>
+    <id>https://jason-jp-yang.github.io/Blog/2023/12/23/hello-world/</id>
     <published>2023-12-23T01:00:00.000Z</published>
     <updated>2023-12-23T02:00:00.000Z</updated>
     
@@ -60,12 +60,12 @@ Buskers in Mong Kok have to contend with other acts and throngs of pedestrians. 
     
     
     
-    <category term="Hexo" scheme="https://jason-jp-yang.github.io/categories/Hexo/"/>
+    <category term="Hexo" scheme="https://jason-jp-yang.github.io/Blog/categories/Hexo/"/>
     
-    <category term="Hello World" scheme="https://jason-jp-yang.github.io/categories/Hexo/Hello-World/"/>
+    <category term="Hello World" scheme="https://jason-jp-yang.github.io/Blog/categories/Hexo/Hello-World/"/>
     
     
-    <category term="Hexo" scheme="https://jason-jp-yang.github.io/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://jason-jp-yang.github.io/Blog/tags/Hexo/"/>
     
   </entry>
   
