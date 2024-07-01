@@ -1,0 +1,2224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Jason Yang">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://blog.jason-yang.top/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta property="og:type" content="website">
+<meta property="og:title" content="Jason Yang&#39;s Blog">
+<meta property="og:url" content="https://blog.jason-yang.top/index.html">
+<meta property="og:site_name" content="Jason Yang&#39;s Blog">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Jason Yang">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+        Jason Yang&#39;s Blog
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    
+        <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    
+<script src="/js/libs/anime.min.js"></script>
+
+    <h1 class="ml13">
+        Jason Yang&#39;s Blog
+    </h1>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+
+        anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [100,0],
+                translateZ: 0,
+                opacity: [0,1],
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i
+            }).add({
+            targets: '.ml13 .letter',
+            translateY: [0,-100],
+            opacity: [1,0],
+            easing: "easeInExpo",
+            duration: 1200,
+            delay: (el, i) => 100 + 30 * i
+        });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            hidePreloaderAfterTimeout(1000); // Hide after 1000 milliseconds once the window has loaded
+        });
+
+        // Backup failsafe: Hide preloader after a maximum of 5000 milliseconds, regardless of the window load event
+        hidePreloaderAfterTimeout(5000);
+
+        function hidePreloaderAfterTimeout(delay) {
+            setTimeout(function () {
+                var preloader = document.querySelector('.preloader');
+                preloader.style.opacity = '0';
+                setTimeout(function () {
+                    preloader.style.display = 'none';
+                }, 200);
+            }, delay);
+        }
+    </script>
+</div>
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    window.config = {"hostname":"blog.jason-yang.top","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left"},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":false,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":6,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":true,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Jason Yang's Blog","subtitle":{"text":["Welcome to Jason Yang's Blog!!!","Hope you can find anything you want at here!","长假结束，万物复苏。今日宜开张。——小饭","再见，再次见到。嘿，朋友，我们又见面了。——小饭"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"links":{"github":"https://github.com/Jason-JP-Yang","instagram":null,"zhihu":null,"twitter":null,"email":"jiepengyang@outlook.com","bilibili":"https://space.bilibili.com/3493124315809839?spm_id_from=333.1007.0.0"},"qrs":{"weixin":"/images/home_banner.social_links.qrs/weixin.jpg","fa-brands fa-whatsapp":"/images/home_banner.social_links.qrs/whatsapp.jpg"}}},"plugins":{"feed":{"enable":true,"type":["atom","rss2"],"path":["/atom.xml","/rss2.xml"],"limit":0,"content":true,"autodiscovery":true,"order_by":"-date"},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"A Balmy Spring Day","artist":"October","url":"/music/Vain-October/A Balmy Spring Day - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"A Good Year","artist":"October","url":"/music/Vain-October/A Good Year - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"A-Sin","artist":"October","url":"/music/Vain-October/A-Sin - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"Acacia","artist":"October","url":"/music/Vain-October/Acacia - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"At The Window","artist":"October","url":"/music/Vain-October/At The Window - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"Cherry Blossom","artist":"October","url":"/music/Vain-October/Cherry Blossom - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"Dear Mama","artist":"October","url":"/music/Vain-October/Dear Mama - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"I'm In You","artist":"October","url":"/music/Vain-October/I'm In You - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"I'm In You (Piano Version)","artist":"October","url":"/music/Vain-October/I'm In You (Piano Version) - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"Joshua","artist":"October","url":"/music/Vain-October/Joshua - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"Recollection","artist":"October","url":"/music/Vain-October/Recollection - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"Romance","artist":"October","url":"/music/Vain-October/Romance - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"Silence","artist":"October","url":"/music/Vain-October/Silence - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"Tears","artist":"October","url":"/music/Vain-October/Tears - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"Time To Love","artist":"October","url":"/music/Vain-October/Time To Love - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"To My Beautiful","artist":"October","url":"/music/Vain-October/To My Beautiful - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"Vain","artist":"October","url":"/music/Vain-October/Vain - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"With You","artist":"October","url":"/music/Vain-October/With You - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"},{"name":"Your Heart, Softness","artist":"October","url":"/music/Vain-October/Your Heart, Softness - October.mp3","cover":"/music/Vain-October/Vain-October.jpg"}],"autoplay":true,"preload":"auto","mutex":true},"mermaid":{"enable":true,"version":"9.3.0"}},"version":"2.6.0","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Posts":{"icon":"fa-regular fa-file-lines","submenus":{"Archives":"/archives","Tags":"/tags","Categories":"/categories","Masonry":"/masonry/masonry-links"}},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Blog":"/","Github":"https://github.com/Jason-JP-Yang","email":"mailto:jiepengyang@outlook.com","Friends":"/links"}},"Links":{"icon":"fa-regular fa-link","submenus":{"All Links 所有链接":"/links","About me 关于我自己":"/about","Random thoughts 个人动态":"/essays","Masonry 瀑布流相册":"/masonry/masonry-links"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"About Me":{"path":"/about","icon":"fa-regular fa-user"},"Masonry":{"path":"/masonry/masonry-links","icon":"fa-solid fa-image"},"All Links":{"path":"/links","icon":"fa-regular fa-link"},"My Random thoughts":{"path":"/essays","icon":"fa-regular fa-message-smile"},"Github":{"path":"https://github.com/Jason-JP-Yang","icon":"fa-brands fa-github"},"Bilibili":{"path":"https://space.bilibili.com/3493124315809839?spm_id_from=333.1007.0.0","icon":"fa-brands fa-bilibili"}}},"article_date_format":"YYYY-MM-DD HH:mm:ss","categories":{"enable":true,"limit":6},"tags":{"enable":true,"limit":6}},"footerStart":"2023/12/23"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+        
+<link rel="stylesheet" href="/fontawesome/thin.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/fontawesome/light.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/fontawesome/duotone.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/fontawesome/sharp-solid.min.css">
+
+    
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+        
+    <style>
+        .home-banner-container {
+            background: none !important;
+        }
+        .home-article-item,
+        .sidebar-links,
+        .sidebar-content,
+        a.page-number,
+        a.extend,
+        .sidebar-links .links:hover,
+        .right-bottom-tools,
+        footer.footer {
+            background-color: var(--background-color-transparent-80) !important;
+        }
+        .right-bottom-tools:hover,
+        a.page-number:hover,
+        a.extend:hover {
+            background-color: var(--primary-color) !important;
+        }
+        .site-info,
+        .home-article-sticky-label {
+            background-color: var(--background-color-transparent-15) !important;
+        }
+        .home-article-sticky-label {
+            backdrop-filter: none !important;
+        }
+    </style>
+    <div class="home-banner-background transition-fade fixed top-0 left-0 w-screen h-screen scale-125 sm:scale-110 box-border will-change-transform bg-cover">
+        <img src="/images/wallhaven-wqery6-light.webp" alt="home-banner-background" class="w-full h-full object-cover dark:hidden">
+        <img src="/images/wallhaven-wqery6-dark.webp" alt="home-banner-background" class="w-full h-full object-cover hidden dark:block">
+    </div>
+
+
+<div class="home-banner-container flex justify-center items-center transition-fade relative">
+    
+    <div class="content mt-8 flex flex-col justify-center items-center">
+        <div class="description flex flex-col justify-center items-center w-screen font-medium text-center"
+        
+        >
+            Jason Yang's Blog
+            
+            
+                <p><i id="subtitle"></i></p>
+            
+        </div>
+        
+            <div class="absolute bottom-0.5 flex flex-row justify-between max-w-[1340px] items-center w-full px-8 sm:px-12">
+                <div class="p-3 bg-gray-300/50 dark:bg-gray-500/40 backdrop-blur-lg border border-white/20 dark:border-gray-500/30 group rounded-full cursor-pointer flex justify-center items-center aspect-square h-full shadow-redefine-flat hover:shadow-redefine-flat-hover transition-shadow" onclick="scrollToMain()" >
+                    <i class="fa-solid fa-arrow-down fa-fw fa-lg group-hover:translate-y-1 transition-transform"></i>
+                </div>
+                <div class="social-contacts px-6 py-3 bg-gray-300/50 dark:bg-gray-500/40 backdrop-blur-lg border border-white/20 dark:border-gray-500/30 shadow-redefine-flat rounded-full flex flex-row gap-3 items-center">
+                    
+                        
+                            
+                                <span class="social-contact-item github">
+                                    <a target="_blank" href="https://github.com/Jason-JP-Yang">
+                                        <i class="fa-brands fa-fw fa-lg fa-github"></i>
+                                    </a>
+                                </span>
+                            
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            
+                                <span class="social-contact-item email ">
+                                    <a href="mailto:jiepengyang@outlook.com">
+                                        <i class="fa-solid fa-fw fa-at fa-lg"></i>
+                                    </a>
+                                </span>
+                            
+                        
+                    
+                        
+                            
+                                <span class="social-contact-item bilibili">
+                                    <a target="_blank" href="https://space.bilibili.com/3493124315809839?spm_id_from=333.1007.0.0">
+                                        <i class="fa-brands fa-fw fa-lg fa-bilibili"></i>
+                                    </a>
+                                </span>
+                            
+                        
+                    
+                    
+
+                        <div class="social-links-divider vertical-separator w-[1px] h-4 bg-third-text-color mx-0.5"></div>
+
+                        
+                            
+                                
+                                    <span class="social-contact-item-qr weixin cursor-pointer group">
+                                        <a target="_blank">
+                                            <i class="fa-brands fa-fw fa-lg fa-weixin"></i>
+                                            <div class="social-qr-container absolute h-auto bg-background-color-transparent-40 border border-white/20 dark:border-gray-500/30 overflow-hidden rounded-2xl bottom-0 mb-14 right-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 translate-y-0.5 group-hover:translate-y-0 transition-all">
+                                                <img class="social-contacts-qr w-64"
+                                                     src="/images/home_banner.social_links.qrs/weixin.jpg"/>
+                                            </div>
+                                        </a>
+                                    </span>
+                                
+                            
+                        
+                            
+                                
+                                    <span class="social-contact-item-qr cursor-pointer group">
+                                        <a target="_blank">
+                                            <i class="fa-brands fa-whatsapp fa-fw fa-lg"></i>
+                                            <div class="social-qr-container absolute h-auto bg-background-color-transparent-40 border border-white/20 dark:border-gray-500/30 overflow-hidden rounded-2xl bottom-0 mb-14 right-0 invisible group-hover:visible opacity-0 group-hover:opacity-100 translate-y-0.5 group-hover:translate-y-0 transition-all">
+                                                <img class="social-contacts-qr w-64"
+                                                     src="/images/home_banner.social_links.qrs/whatsapp.jpg"/>
+                                            </div>
+                                        </a>
+                                    </span>
+                                
+                            
+                        
+                    
+                </div>
+            </div>
+        
+    </div>
+    <script>
+        const scrollToMain = ()=> {
+            console.log('scroll');
+            const target = document.querySelector('.main-content-container');
+            target.scrollIntoView({ behavior: 'smooth'});
+        }
+    </script>
+</div>
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+
+    <div class="navbar-content has-home-banner">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/redefine-favicon.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+                <h1>
+                Jason Yang&#39;s Blog
+                </h1>
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="active"
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-file-lines fa-fw"></i>
+                                    POSTS
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/archives">
+                                                    ARCHIVES
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/tags">
+                                                    TAGS
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/categories">
+                                                    CATEGORIES
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/masonry/masonry-links">
+                                                    MASONRY
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    ABOUT
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ME
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/">
+                                                    BLOG
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a target="_blank" rel="noopener" href="https://github.com/Jason-JP-Yang">
+                                                    GITHUB
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="mailto:jiepengyang@outlook.com">
+                                                    EMAIL
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/links">
+                                                    FRIENDS
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown"
+                                   href="#"
+                                        onClick=&#34;return false;&#34;>
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    LINKS
+                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                        
+                                            <li>
+                                                <a href="/links">
+                                                    ALL LINKS 所有链接
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/about">
+                                                    ABOUT ME 关于我自己
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/essays">
+                                                    RANDOM THOUGHTS 个人动态
+                                                </a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="/masonry/masonry-links">
+                                                    MASONRY 瀑布流相册
+                                                </a>
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                             navbar-data-toggle="submenu-Posts"
+                        >
+                            <span>
+                                POSTS
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-Posts">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/archives">ARCHIVES</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/tags">TAGS</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/categories">CATEGORIES</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/masonry/masonry-links">MASONRY</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                             navbar-data-toggle="submenu-About"
+                        >
+                            <span>
+                                ABOUT
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-About">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ME</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/">BLOG</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           target="_blank" rel="noopener" href="https://github.com/Jason-JP-Yang">GITHUB</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="mailto:jiepengyang@outlook.com">EMAIL</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/links">FRIENDS</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
+                        
+                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                             navbar-data-toggle="submenu-Links"
+                        >
+                            <span>
+                                LINKS
+                            </span>
+                            
+                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
+                            
+                        </div>
+                        
+
+                        
+                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-Links">
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/links">ALL LINKS 所有链接</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/about">ABOUT ME 关于我自己</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/essays">RANDOM THOUGHTS 个人动态</a>
+                                    </div>
+                                
+                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl"
+                                           href="/masonry/masonry-links">MASONRY 瀑布流相册</a>
+                                    </div>
+                                
+                            </div>
+                        
+                    </li>
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">25</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">15</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">17</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+                <div class="home-sidebar-container">
+    <div class="sticky-container sticky">
+        
+        
+            
+                <div class="sidebar-links">
+                    <div class="site-info">
+                        <div class="site-name">Jason Yang&#39;s Blog</div>
+                        
+                    </div>
+                    
+                        
+                            
+                                <a class="links" href="/archives">
+                                    
+                                        <i class="fa-regular fa-archive icon-space"></i>
+                                    
+                                    <span class="link-name">Archives</span>
+                                </a>
+                            
+                        
+                            
+                                <a class="links" href="/tags">
+                                    
+                                        <i class="fa-regular fa-tags icon-space"></i>
+                                    
+                                    <span class="link-name">Tags</span>
+                                </a>
+                            
+                        
+                            
+                                <a class="links" href="/categories">
+                                    
+                                        <i class="fa-regular fa-folder icon-space"></i>
+                                    
+                                    <span class="link-name">Categories</span>
+                                </a>
+                            
+                        
+                            
+                                <a class="links" href="/about">
+                                    
+                                        <i class="fa-regular fa-user icon-space"></i>
+                                    
+                                    <span class="link-name">About Me</span>
+                                </a>
+                            
+                        
+                            
+                                <a class="links" href="/masonry/masonry-links">
+                                    
+                                        <i class="fa-solid fa-image icon-space"></i>
+                                    
+                                    <span class="link-name">Masonry</span>
+                                </a>
+                            
+                        
+                            
+                                <a class="links" href="/links">
+                                    
+                                        <i class="fa-regular fa-link icon-space"></i>
+                                    
+                                    <span class="link-name">All Links</span>
+                                </a>
+                            
+                        
+                            
+                                <a class="links" href="/essays">
+                                    
+                                        <i class="fa-regular fa-message-smile icon-space"></i>
+                                    
+                                    <span class="link-name">My Random thoughts</span>
+                                </a>
+                            
+                        
+                            
+                                <a class="links" target="_blank" rel="noopener" href="https://github.com/Jason-JP-Yang">
+                                    
+                                        <i class="fa-brands fa-github icon-space"></i>
+                                    
+                                    <span class="link-name">Github</span>
+                                </a>
+                            
+                        
+                            
+                                <a class="links" target="_blank" rel="noopener" href="https://space.bilibili.com/3493124315809839?spm_id_from=333.1007.0.0">
+                                    
+                                        <i class="fa-brands fa-bilibili icon-space"></i>
+                                    
+                                    <span class="link-name">Bilibili</span>
+                                </a>
+                            
+                        
+                    
+                </div>
+            
+            <div class="sidebar-content"  marginTop >
+                <div class="avatar flex justify-center">
+    <img src="/images/redefine-avatar.svg">
+</div>
+                <div class="author flex flex-col justify-center my-2.5 mx-0">
+    <div class="name">Jason Yang</div>
+    
+</div>
+                <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">25</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">15</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">17</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+            </div>
+        
+
+    </div>
+</div>
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="home-content-container">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+                    <div class="absolute top-[12px] right-[12px] text-[0.7rem] text-third-text-color rounded-medium bg-background-color-transparent-15 py-[2px] px-[10px] border border-border-color z-1 hover:text-first-text-color cursor-default">
+                        <i class="fa-regular fa-thumbtack mr-[3px] text-[0.65rem]"></i>Sticky
+                    </div>
+                
+
+                
+                    
+                
+
+                
+                    <div id="home-article-thumbnail" class="home-article-thumbnail relative h-[150px] overflow-hidden rounded-t-large">
+                        <a href="/2024/02/08/%E8%B4%B5%E5%B7%9E%E8%87%AA%E7%84%B6%E5%A4%A9%E6%96%87%E8%AE%BF%E9%97%AE%E5%9B%A2%20DAY3/">
+                            <img src="/images/posts/%E4%B8%AD%E5%9B%BD%E5%A4%A9%E7%9C%BC.png" alt="贵州自然天文访问团 DAY3" class="w-full h-full object-cover dark:brightness-75 transition-all" />
+                        </a>
+                    </div>
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-5">
+                    <h3 class="home-article-title">
+                        <a href="/2024/02/08/%E8%B4%B5%E5%B7%9E%E8%87%AA%E7%84%B6%E5%A4%A9%E6%96%87%E8%AE%BF%E9%97%AE%E5%9B%A2%20DAY3/">
+                            贵州自然天文访问团 DAY3
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            <p>中国天眼</p>
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Feb 08 2024 08:00:00 GMT+0800">
+                
+                    2024-02-08 08:00:00
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Notes/">Notes</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Notes/%E8%B4%B5%E5%B7%9E%E8%87%AA%E7%84%B6%E5%A4%A9%E6%96%87%E8%AE%BF%E9%97%AE%E5%9B%A2/">贵州自然天文访问团</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/China/">China</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Travel/">Travel</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Scenery/">Scenery</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Astronomy/">Astronomy</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/02/08/%E8%B4%B5%E5%B7%9E%E8%87%AA%E7%84%B6%E5%A4%A9%E6%96%87%E8%AE%BF%E9%97%AE%E5%9B%A2%20DAY3/">Read more<span class="seo-reader-text">贵州自然天文访问团 DAY3</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+                    <div class="absolute top-[12px] right-[12px] text-[0.7rem] text-third-text-color rounded-medium bg-background-color-transparent-15 py-[2px] px-[10px] border border-border-color z-1 hover:text-first-text-color cursor-default">
+                        <i class="fa-regular fa-thumbtack mr-[3px] text-[0.65rem]"></i>Sticky
+                    </div>
+                
+
+                
+                    
+                
+
+                
+                    <div id="home-article-thumbnail" class="home-article-thumbnail relative h-[150px] overflow-hidden rounded-t-large">
+                        <a href="/2024/02/27/%E8%B4%B5%E5%B7%9E%E8%87%AA%E7%84%B6%E5%A4%A9%E6%96%87%E8%AE%BF%E9%97%AE%E5%9B%A2%20DAY2/">
+                            <img src="/images/cover-img/%E8%B4%B5%E5%B7%9E%E8%87%AA%E7%84%B6%E5%A4%A9%E6%96%87%E8%AE%BF%E9%97%AE%E5%9B%A2%20DAY2.jpg" alt="贵州自然天文访问团 DAY2" class="w-full h-full object-cover dark:brightness-75 transition-all" />
+                        </a>
+                    </div>
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-5">
+                    <h3 class="home-article-title">
+                        <a href="/2024/02/27/%E8%B4%B5%E5%B7%9E%E8%87%AA%E7%84%B6%E5%A4%A9%E6%96%87%E8%AE%BF%E9%97%AE%E5%9B%A2%20DAY2/">
+                            贵州自然天文访问团 DAY2
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            <p>贵州大学&gt;&gt;青岩古镇</p>
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Feb 27 2024 08:00:00 GMT+0800">
+                
+                    2024-02-27 08:00:00
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Notes/">Notes</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Notes/%E8%B4%B5%E5%B7%9E%E8%87%AA%E7%84%B6%E5%A4%A9%E6%96%87%E8%AE%BF%E9%97%AE%E5%9B%A2/">贵州自然天文访问团</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/China/">China</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Travel/">Travel</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Scenery/">Scenery</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Astronomy/">Astronomy</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/02/27/%E8%B4%B5%E5%B7%9E%E8%87%AA%E7%84%B6%E5%A4%A9%E6%96%87%E8%AE%BF%E9%97%AE%E5%9B%A2%20DAY2/">Read more<span class="seo-reader-text">贵州自然天文访问团 DAY2</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+                    <div class="absolute top-[12px] right-[12px] text-[0.7rem] text-third-text-color rounded-medium bg-background-color-transparent-15 py-[2px] px-[10px] border border-border-color z-1 hover:text-first-text-color cursor-default">
+                        <i class="fa-regular fa-thumbtack mr-[3px] text-[0.65rem]"></i>Sticky
+                    </div>
+                
+
+                
+                    
+                
+
+                
+                    <div id="home-article-thumbnail" class="home-article-thumbnail relative h-[150px] overflow-hidden rounded-t-large">
+                        <a href="/2024/02/26/%E8%B4%B5%E5%B7%9E%E8%87%AA%E7%84%B6%E5%A4%A9%E6%96%87%E8%AE%BF%E9%97%AE%E5%9B%A2%20DAY1/">
+                            <img src="/images/cover-img/%E8%B4%B5%E5%B7%9E%E8%87%AA%E7%84%B6%E5%A4%A9%E6%96%87%E8%AE%BF%E9%97%AE%E5%9B%A2%20DAY1.jpg" alt="贵州自然天文访问团 DAY1" class="w-full h-full object-cover dark:brightness-75 transition-all" />
+                        </a>
+                    </div>
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-5">
+                    <h3 class="home-article-title">
+                        <a href="/2024/02/26/%E8%B4%B5%E5%B7%9E%E8%87%AA%E7%84%B6%E5%A4%A9%E6%96%87%E8%AE%BF%E9%97%AE%E5%9B%A2%20DAY1/">
+                            贵州自然天文访问团 DAY1
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            <p>高铁上的旅途&gt;&gt;甲秀楼</p>
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Feb 26 2024 08:00:00 GMT+0800">
+                
+                    2024-02-26 08:00:00
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Notes/">Notes</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Notes/%E8%B4%B5%E5%B7%9E%E8%87%AA%E7%84%B6%E5%A4%A9%E6%96%87%E8%AE%BF%E9%97%AE%E5%9B%A2/">贵州自然天文访问团</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/China/">China</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Travel/">Travel</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Scenery/">Scenery</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Astronomy/">Astronomy</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/02/26/%E8%B4%B5%E5%B7%9E%E8%87%AA%E7%84%B6%E5%A4%A9%E6%96%87%E8%AE%BF%E9%97%AE%E5%9B%A2%20DAY1/">Read more<span class="seo-reader-text">贵州自然天文访问团 DAY1</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+                    <div class="absolute top-[12px] right-[12px] text-[0.7rem] text-third-text-color rounded-medium bg-background-color-transparent-15 py-[2px] px-[10px] border border-border-color z-1 hover:text-first-text-color cursor-default">
+                        <i class="fa-regular fa-thumbtack mr-[3px] text-[0.65rem]"></i>Sticky
+                    </div>
+                
+
+                
+                    
+                
+
+                
+                    <div id="home-article-thumbnail" class="home-article-thumbnail relative h-[150px] overflow-hidden rounded-t-large">
+                        <a href="/2024/02/09/Vocab/">
+                            <img src="/images/cover-img/en-vocab.jpg" alt="English Vocabulary Collecting" class="w-full h-full object-cover dark:brightness-75 transition-all" />
+                        </a>
+                    </div>
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-5">
+                    <h3 class="home-article-title">
+                        <a href="/2024/02/09/Vocab/">
+                            English Vocabulary Collecting
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            <p>English Vocabulary Collecting</p>
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Fri Feb 09 2024 08:38:00 GMT+0800">
+                
+                    2024-02-09 08:38:00
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Notes/">Notes</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Notes/Vocabulary/">Vocabulary</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Notes/">Notes</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Vocabulary/">Vocabulary</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/02/09/Vocab/">Read more<span class="seo-reader-text">English Vocabulary Collecting</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+                    
+                
+
+                
+                    <div id="home-article-thumbnail" class="home-article-thumbnail relative h-[150px] overflow-hidden rounded-t-large">
+                        <a href="/2024/02/24/How%20AI%20and%20Automation%20Are%20Transforming%20The%20world/">
+                            <img src="/images/cover-img/AI-tech.jpeg" alt="Can Hong Kong&#39;s Street Performers Get Some Love ...... and More Mong Kok Busking Space?" class="w-full h-full object-cover dark:brightness-75 transition-all" />
+                        </a>
+                    </div>
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-5">
+                    <h3 class="home-article-title">
+                        <a href="/2024/02/24/How%20AI%20and%20Automation%20Are%20Transforming%20The%20world/">
+                            Can Hong Kong&#39;s Street Performers Get Some Love ...... and More Mong Kok Busking Space?
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            <p>BY Khurram Akhtar; Forbes Councils Member; Forbes Business Council \n</p>
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sat Feb 24 2024 16:20:00 GMT+0800">
+                
+                    2024-02-24 16:20:00
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Reading-Article/">Reading Article</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Reading-Article/Technology/">Technology</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Technology/">Technology</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Reading-Article/">Reading-Article</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/AI/">AI</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/02/24/How%20AI%20and%20Automation%20Are%20Transforming%20The%20world/">Read more<span class="seo-reader-text">Can Hong Kong&#39;s Street Performers Get Some Love ...... and More Mong Kok Busking Space?</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+                    
+                
+
+                
+                    <div id="home-article-thumbnail" class="home-article-thumbnail relative h-[150px] overflow-hidden rounded-t-large">
+                        <a href="/2024/02/08/%E6%B5%B7%E7%91%9E%EF%BC%9A%E6%96%B9%E6%98%AF%E6%80%A7%E6%A0%BC%20%E5%9C%93%E6%98%AF%E6%99%BA%E6%85%A7/">
+                            <img src="/images/cover-img/%E6%B5%B7%E7%91%9E-c.jpg" alt="海瑞：方是性格 圓是智慧" class="w-full h-full object-cover dark:brightness-75 transition-all" />
+                        </a>
+                    </div>
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-5">
+                    <h3 class="home-article-title">
+                        <a href="/2024/02/08/%E6%B5%B7%E7%91%9E%EF%BC%9A%E6%96%B9%E6%98%AF%E6%80%A7%E6%A0%BC%20%E5%9C%93%E6%98%AF%E6%99%BA%E6%85%A7/">
+                            海瑞：方是性格 圓是智慧
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            <p>（本文由「歷史春秋網」授權「知史」轉載繁體字版，特此鳴謝。）<br>明人海瑞，自號「剛峰」，這兩個字形象地道出了他剛直不阿的性格。在歷史上，一個忠直之士，倘若又難逢明主，那他能活下來的機會十分渺茫，而海瑞卻是個例外，儘管他一生也並不順利，但卻得以善終，推究起來，在他恪守方的性格背後，也不缺乏圓的智慧。</p>
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Feb 08 2024 23:00:00 GMT+0800">
+                
+                    2024-02-08 23:00:00
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Reading-Article/">Reading Article</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Reading-Article/History/">History</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/China/">China</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Reading-Article/">Reading-Article</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/History/">History</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E5%8E%86%E5%8F%B2-%E6%98%8E%E4%BB%A3/">历史-明代</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/02/08/%E6%B5%B7%E7%91%9E%EF%BC%9A%E6%96%B9%E6%98%AF%E6%80%A7%E6%A0%BC%20%E5%9C%93%E6%98%AF%E6%99%BA%E6%85%A7/">Read more<span class="seo-reader-text">海瑞：方是性格 圓是智慧</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+                    
+                
+
+                
+                    <div id="home-article-thumbnail" class="home-article-thumbnail relative h-[150px] overflow-hidden rounded-t-large">
+                        <a href="/2024/02/04/%E8%87%98%E6%9C%88%E4%BA%8C%E5%8D%81%E5%85%AD%20%E8%B2%B7%E5%B9%B4%E8%82%89/">
+                            <img src="/images/cover-img/%E8%85%8A%E6%9C%88%E4%BA%8C%E5%8D%81%E5%85%AD%E5%B9%B4%E8%82%89.jpg" alt="臘月二十六 買年肉" class="w-full h-full object-cover dark:brightness-75 transition-all" />
+                        </a>
+                    </div>
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-5">
+                    <h3 class="home-article-title">
+                        <a href="/2024/02/04/%E8%87%98%E6%9C%88%E4%BA%8C%E5%8D%81%E5%85%AD%20%E8%B2%B7%E5%B9%B4%E8%82%89/">
+                            臘月二十六 買年肉
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            <p>（作者：知史團隊，原文刊登日期：2016年2月4日，現為刪節版。<br>關於過年的民俗有很多，比如年初一不能掃地，年三十一定要吃團圓飯等等。而對於傳統的中國人，年二十五就開始進入過年的日子了，所以也就有臘月二十六買年肉的風俗。</p>
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Sun Feb 04 2024 15:47:00 GMT+0800">
+                
+                    2024-02-04 15:47:00
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Reading-Article/">Reading Article</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Reading-Article/History/">History</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/China/">China</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Reading-Article/">Reading-Article</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E4%B9%A0%E4%BF%97/">中国传统习俗</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/History/">History</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/02/04/%E8%87%98%E6%9C%88%E4%BA%8C%E5%8D%81%E5%85%AD%20%E8%B2%B7%E5%B9%B4%E8%82%89/">Read more<span class="seo-reader-text">臘月二十六 買年肉</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/01/30/%E6%83%8A%EF%BC%81%20%E5%B9%BF%E4%B8%9C%E4%BA%BA%E6%9C%80%E6%80%95%E7%9A%84%E5%9B%9E%E5%8D%97%E5%A4%A9%E6%9D%A5%E4%BA%86%E2%80%A6%E2%80%A6/">
+                            惊！ 广东人最怕的回南天来了……
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            <p>天气剧透:1月30日起，受暖湿气流影响，广东多地会有回南天现象，持续时间可能一周左右，请注意防潮。自1月20日以来，强冷空气给我省带来持续降温天气，此次过程具有“阶梯式降温、最低气温低、冰（雪）范围广”的特点。</p>
+
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Tue Jan 30 2024 07:10:00 GMT+0800">
+                
+                    2024-01-30 07:10:00
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/News-Article/">News Article</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/News-Article/Weather/">Weather</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/News-Article/">News-Article</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/China/">China</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Weather/">Weather</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/01/30/%E6%83%8A%EF%BC%81%20%E5%B9%BF%E4%B8%9C%E4%BA%BA%E6%9C%80%E6%80%95%E7%9A%84%E5%9B%9E%E5%8D%97%E5%A4%A9%E6%9D%A5%E4%BA%86%E2%80%A6%E2%80%A6/">Read more<span class="seo-reader-text">惊！ 广东人最怕的回南天来了……</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+                    
+                
+
+                
+                    <div id="home-article-thumbnail" class="home-article-thumbnail relative h-[150px] overflow-hidden rounded-t-large">
+                        <a href="/2024/01/29/%E5%BC%A0%E6%A1%82%E6%A2%85%EF%BC%9A%E4%B8%8D%E6%83%A7%E4%BA%BA%E7%94%9F%E5%AF%92%E5%86%AC%EF%BC%8C%E7%97%B4%E8%80%85%E5%BF%85%E5%AE%9A%E6%9C%89%E6%88%90/">
+                            <img src="/images/cover-img/%E5%BC%A0%E6%A1%82%E6%A2%85-c.jpeg" alt="张桂梅：不惧人生寒冬，痴者必定有成" class="w-full h-full object-cover dark:brightness-75 transition-all" />
+                        </a>
+                    </div>
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-5">
+                    <h3 class="home-article-title">
+                        <a href="/2024/01/29/%E5%BC%A0%E6%A1%82%E6%A2%85%EF%BC%9A%E4%B8%8D%E6%83%A7%E4%BA%BA%E7%94%9F%E5%AF%92%E5%86%AC%EF%BC%8C%E7%97%B4%E8%80%85%E5%BF%85%E5%AE%9A%E6%9C%89%E6%88%90/">
+                            张桂梅：不惧人生寒冬，痴者必定有成
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            如何面对人生的苦涩&emsp;&emsp; “进步”是我们一如既往的追求。岁月流转中，一个人似乎只有保持向上的姿态、抵达更高的位置、获得理想的成就，才算是没有辜负珍贵的时光，才能说青春无悔、未来可期。但对于大多数人而言，人生并不是一条灯火通明、平坦宽...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Jan 29 2024 20:00:00 GMT+0800">
+                
+                    2024-01-29 20:00:00
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Reading-Article/">Reading Article</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Reading-Article/Determination/">Determination</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Reading-Article/">Reading-Article</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E5%BC%A0%E6%A1%82%E6%A2%85/">张桂梅</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Determination/">Determination</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/01/29/%E5%BC%A0%E6%A1%82%E6%A2%85%EF%BC%9A%E4%B8%8D%E6%83%A7%E4%BA%BA%E7%94%9F%E5%AF%92%E5%86%AC%EF%BC%8C%E7%97%B4%E8%80%85%E5%BF%85%E5%AE%9A%E6%9C%89%E6%88%90/">Read more<span class="seo-reader-text">张桂梅：不惧人生寒冬，痴者必定有成</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+                    
+                
+
+                
+                    <div id="home-article-thumbnail" class="home-article-thumbnail relative h-[150px] overflow-hidden rounded-t-large">
+                        <a href="/2024/01/29/Busking%20good%20or%20bad/">
+                            <img src="/images/cover-img/busking.jpg" alt="Busking: Good or Bad? " class="w-full h-full object-cover dark:brightness-75 transition-all" />
+                        </a>
+                    </div>
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-5">
+                    <h3 class="home-article-title">
+                        <a href="/2024/01/29/Busking%20good%20or%20bad/">
+                            Busking: Good or Bad? 
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            By Daisy Hughes&emsp; I’d like this cacophony of ear-splitting screams stop right now. It’s unbearable and bad for business. ...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Mon Jan 29 2024 17:10:00 GMT+0800">
+                
+                    2024-01-29 17:10:00
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/Reading-Article/">Reading Article</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="/categories/Reading-Article/Busking/">Busking</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Reading-Article/">Reading-Article</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Busking/">Busking</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/01/29/Busking%20good%20or%20bad/">Read more<span class="seo-reader-text">Busking: Good or Bad? </span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator px-7 py-5">
+        <div class="paginator">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa-regular fa-angle-right"></i></a>
+</div>
+
+    </div>
+</div>
+
+                    <div class="comment-container pjax"></div>
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+            <div class="customize-info my-1">Thanks For Visiting Jason Yang's Blog</div>
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-regular fa-computer-classic"></i>&nbsp;&nbsp;<a href="/">Jason Yang</a>
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.0</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/libs/mermaid.min.js"></script>
+
+    
+<script src="/js/plugins/mermaid.js"></script>
+
+
+
+
+    
+<script src="/js/libs/minimasonry.min.js"></script>
+
+    
+<script src="/js/plugins/masonry.js" type="module"></script>
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+    <div id="aplayer"></div>
+
+<script src="/js/libs/APlayer.min.js"></script>
+
+
+<script src="/js/plugins/aplayer.js"></script>
+
+
+</body>
+</html>
