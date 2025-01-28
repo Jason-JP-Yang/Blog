@@ -1,0 +1,203 @@
+{
+  "main": {
+    "id": "395a3c37720263ea",
+    "type": "split",
+    "children": [
+      {
+        "id": "aa5f485046ccd7d4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f58e7397e10324c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "updates/index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "index"
+            }
+          },
+          {
+            "id": "1c346c4434a9cfad",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2025 RANGER Manual_withCover_11_27/txt/2025 RANGER Manual (V_20241127) -DUAL.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025 RANGER Manual (V_20241127) -DUAL"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f42d2565e8439c05",
+    "type": "split",
+    "children": [
+      {
+        "id": "6e3977a61151988e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8b7c7195fed8b8d3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "b2fd5676ff41151f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "405b5c27fcc38ebd",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 264.5033988952637
+  },
+  "right": {
+    "id": "f093e033956aed05",
+    "type": "split",
+    "children": [
+      {
+        "id": "077af31fc6c8f228",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8b383ab9b660b499",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "2025 RANGER Manual_withCover_11_27/txt/2025 RANGER Manual (V_20241127).md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2025 RANGER Manual (V_20241127)"
+            }
+          },
+          {
+            "id": "df2b3d480fa99f25",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "2025 RANGER Manual_withCover_11_27/txt/2025 RANGER Manual (V_20241127).md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2025 RANGER Manual (V_20241127)"
+            }
+          },
+          {
+            "id": "a717ae38e3936218",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "dc5261c2fe8b0add",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "2025 RANGER Manual_withCover_11_27/txt/2025 RANGER Manual (V_20241127).md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2025 RANGER Manual (V_20241127)"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "f58e7397e10324c2",
+  "lastOpenFiles": [
+    "2025 RANGER Manual_withCover_11_27/txt/2025 RANGER Manual (V_20241127) -DUAL.md",
+    "2025 RANGER Manual_withCover_11_27/txt/2025 RANGER Manual (V_20241127) -EN.md",
+    "2025 RANGER Manual_withCover_11_27/txt/2025 RANGER Manual (V_20241127) -ZH.md",
+    "2025 RANGER Manual_withCover_11_27/txt/2025 RANGER Manual (V_20241127) -DUAL copy.md",
+    "2025 RANGER Manual_withCover_11_27/txt/2025 RANGER Manual (V_20241127).md",
+    "2025 RANGER Manual_withCover_11_27/txt/count.py",
+    "2025 RANGER Manual_withCover_11_27/txt/B5FA6130",
+    "2025 RANGER Manual_withCover_11_27/txt/B45A6130",
+    "2025 RANGER Manual_withCover_11_27/txt/translate.csv",
+    "2025 RANGER Manual_withCover_11_27/txt/2025 RANGER Manual_withCover_11_27_origin.pdf",
+    "2025 RANGER Manual_withCover_11_27/txt/2025 RANGER Manual_withCover_11_27_layout.pdf",
+    "().md",
+    "2025 RANGER Manual_withCover_11_27/txt/images/7323e551051e7c23c544bb0b3082dae456faae134a53a968840e99fbff0942f1.jpg",
+    "2025 RANGER Manual_withCover_11_27/txt/images/7044eed5eb6e94a4e83626a600627b129d4a4bb8cbbec40461d45e76757a8f1a.jpg",
+    "2025 RANGER Manual_withCover_11_27/txt/images/7323e551051e7c23c544bb0b3082dae456faae134a53a968840e99fbff0942f1.jpg.~tmp",
+    "2025 RANGER Manual_withCover_11_27/txt/2025 RANGER Manual_withCover_11_27_spans.pdf",
+    "2025 RANGER Manual_withCover_11_27/txt/images/2a62f993d25b44585a5f791983e3d09e7308768852e7b65686ddc37b8a16be28.jpg",
+    "2025 RANGER Manual_withCover_11_27/txt/images/f9b0aba97bd23411a0989cd1335df2a56e12b97487ba9b14105ec9f24b71972c.jpg",
+    "2025 RANGER Manual_withCover_11_27/txt/images/e715a94e0e2e9ffa132f76ecd139c6aea8465215833658f91cdb5eab4795d312.jpg",
+    "2025 RANGER Manual_withCover_11_27/txt/images/28e599d6ab283b9b3bf3bbb5e8e6a7ed6314ae5b92c9313ab00e30cef0d13ab5.jpg",
+    "DeepSeek_V3/auto/DeepSeek_V3.md"
+  ]
+}

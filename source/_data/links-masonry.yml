@@ -1,0 +1,39 @@
+# Links 书写模板 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# - links_category: 分类名
+#   has_thumbnail: 是否有预览图 (true/false)
+#   list: 
+#   - name: 名字
+#     link: 链接
+#     description: 描述1
+#     avatar: 头像
+#     thumbnail: 预览图（has_thumbnail 为 true 时才需要）
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+- links_category: 贵州自然天文访问团
+  has_thumbnail: true
+  list: 
+  - name: Masonry 贵州天文访问团 DAY1
+    link: /masonry/贵州自然天文访问团 DAY1
+    description: 高铁前往贵州并参观甲秀楼
+    avatar: /images/redefine-avatar.svg
+    thumbnail: /images/cover-img/贵州自然天文访问团 DAY1.jpg
+  - name: Masonry 贵州天文访问团 DAY2
+    link: /masonry/贵州自然天文访问团 DAY2
+    description: 参访贵州大学以及青岩古镇
+    avatar: /images/redefine-avatar.svg
+    thumbnail: /images/cover-img/贵州自然天文访问团 DAY2.jpg
+  - name: Masonry 贵州天文访问团 DAY3
+    link: /masonry/贵州自然天文访问团 DAY3
+    description: 参访贵州天眼 *菲林相机记录
+    avatar: /images/redefine-avatar.svg
+    thumbnail: /masonry/贵州自然天文访问团/IMG_20240706212443.jpeg
+  - name: Masonry 贵州天文访问团 DAY4
+    link: /masonry/贵州自然天文访问团 DAY4
+    description: 参访贵州千户苗寨
+    avatar: /images/redefine-avatar.svg
+    thumbnail: /images/cover-img/贵州自然天文访问团 DAY4.jpg
+  - name: Masonry 贵州天文访问团 DAY5
+    link: /masonry/贵州自然天文访问团 DAY5
+    description: 参访贵州省博物馆
+    avatar: /images/redefine-avatar.svg
+    thumbnail: /images/cover-img/贵州自然天文访问团 DAY5.jpg

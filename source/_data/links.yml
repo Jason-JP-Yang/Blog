@@ -1,0 +1,34 @@
+# Links 书写模板 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# - links_category: 分类名
+#   has_thumbnail: 是否有预览图 (true/false)
+#   list: 
+#   - name: 名字
+#     link: 链接
+#     description: 描述1
+#     avatar: 头像
+#     thumbnail: 预览图（has_thumbnail 为 true 时才需要）
+# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+- links_category: Blog's Links
+  has_thumbnail: true
+  list: 
+  - name: Jason Yang's Blog -- Home Page
+    link: /
+    description: Hope you can find anything you want at here!
+    avatar: /images/Blog-ICON-2.svg
+    thumbnail: /images/cover-img/Blog_screenshot.png
+- links_category: Blog's SubMenus Links
+  has_thumbnail: false
+  list: 
+  - name: Jason Yang's Blog -- Archives
+    link: /archives/
+    description: Archives of POSTS
+    avatar: /images/Blog-ICON-2.svg
+  - name: Jason Yang's Blog -- Categories
+    link: /categories/
+    description: All Categories of POSTS
+    avatar: /images/Blog-ICON-2.svg
+  - name: Jason Yang's Blog -- Tags
+    link: /tags/
+    description: All Tags of POSTS
+    avatar: /images/Blog-ICON-2.svg
