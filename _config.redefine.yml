@@ -208,6 +208,7 @@ navbar:
         About me 关于我自己: /about
         Masonry 瀑布流相册: /masonry/masonry-links
         Updates Log 更新日志: /updates
+        Analytics 网站统计: https://analytics.jason-yang.top/share/qTESQLk3w0sDu36F/blog.jason-yang.top
     # ...... # you can add more
   # Navbar search (local search). Requires hexo-generator-searchdb (npm i hexo-generator-searchdb). See https://github.com/theme-next/hexo-generator-searchdb
   search:
@@ -249,6 +250,9 @@ home:
       Updates Log:
         path: /updates
         icon: fa-solid fa-cloud-check
+      Blog Analytics:
+        path: https://analytics.jason-yang.top/share/qTESQLk3w0sDu36F/blog.jason-yang.top
+        icon: fa-solid fa-chart-mixed
   # Article date format
   article_date_format: YYYY-MM-DD HH:mm:ss # auto, relative, YYYY-MM-DD, YYYY-MM-DD HH:mm:ss etc.
   # Article categories visibility

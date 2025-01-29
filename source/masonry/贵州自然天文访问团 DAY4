@@ -90,7 +90,7 @@
 
     <script id="hexo-configurations">
     window.config = {"hostname":"blog.jason-yang.top","root":"/","language":"en","path":"search.xml"};
-    window.theme = {"articles":{"style":{"font_size":"18px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":false,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"github-dark"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":6,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":true,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":"Smiley Sans","url":"/fonts/fontscc.css"},"english":{"enable":false,"family":"Smiley Sans","url":"/fonts/fontscc.css"},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":false,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":{"enable":true,"image":null,"description":"Welcome to Jason Yang's Blog!!! Hope you can find anything you want at here!"},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Jason Yang's Blog","subtitle":{"text":["Welcome to Jason Yang's Blog!!!","Hope you can find anything you want at here!"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.7rem","subtitle_size":"1.3rem","line_height":1.2},"custom_font":{"enable":false,"family":"SiYuanSong-H","url":"/fonts/fontscc.css"},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/Jason-JP-Yang","instagram":null,"zhihu":null,"twitter":null,"email":"jiepengyang@outlook.com","bilibili":"https://space.bilibili.com/3493124315809839?spm_id_from=333.1007.0.0"},"qrs":{"weixin":"/images/home_banner.social_links.qrs/weixin.jpg","fa-brands fa-whatsapp":"/images/home_banner.social_links.qrs/whatsapp.jpg"}}},"plugins":{"feed":{"enable":true,"type":["atom","rss2"],"path":["/atom.xml","/rss2.xml"],"limit":0,"content":true,"autodiscovery":true,"order_by":"-date"},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}],"autoplay":true,"preload":"auto","lrcType":0,"mutex":true},"mermaid":{"enable":true,"version":"9.3.0"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Posts":{"icon":"fa-regular fa-file-lines","submenus":{"Archives":"/archives","Tags":"/tags","Categories":"/categories","Masonry":"/masonry/masonry-links"}},"About":{"icon":"fa-regular fa-user","submenus":{"Me":"/about","Blog":"/","Github":"https://github.com/Jason-JP-Yang","Email":"mailto:admin@jason-yang.top"}},"Links":{"icon":"fa-regular fa-link","submenus":{"All Links 所有链接":"/links","About me 关于我自己":"/about","Discussion 讨论区":"/discussion","Masonry 瀑布流相册":"/masonry/masonry-links","Updates Log 更新日志":"/updates"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"About Me":{"path":"/about","icon":"fa-regular fa-user"},"All Links":{"path":"/links","icon":"fa-regular fa-link"},"Masonry":{"path":"/masonry/masonry-links","icon":"fa-solid fa-image"},"Updates Log":{"path":"/updates","icon":"fa-solid fa-cloud-check"},"Discussion":{"path":"/discussion","icon":"fa-regular fa-message-smile"}}},"article_date_format":"YYYY-MM-DD HH:mm:ss","excerpt_length":200,"categories":{"enable":true,"limit":6},"tags":{"enable":true,"limit":6}},"footerStart":"2023/12/23 11:58:38"};
+    window.theme = { "articles": { "style": { "font_size": "18px", "line_height": 1.5, "image_border_radius": "14px", "image_alignment": "center", "image_caption": false, "link_icon": true, "delete_mask": false, "title_alignment": "left", "headings_top_spacing": { "h1": "3.2rem", "h2": "2.4rem", "h3": "1.9rem", "h4": "1.6rem", "h5": "1.4rem", "h6": "1.3rem" } }, "word_count": { "enable": true, "count": true, "min2read": true }, "author_label": { "enable": false, "auto": false, "list": [] }, "code_block": { "copy": true, "style": "mac", "highlight_theme": { "light": "github", "dark": "github-dark" }, "font": { "enable": false, "family": null, "url": null } }, "toc": { "enable": true, "max_depth": 6, "number": false, "expand": true, "init_open": true }, "copyright": { "enable": true, "default": "cc_by_nc_sa" }, "lazyload": true, "pangu_js": false, "recommendation": { "enable": true, "title": "推荐阅读", "limit": 3, "mobile_limit": 2, "placeholder": "/images/wallhaven-wqery6-light.webp", "skip_dirs": [] } }, "colors": { "primary": "#A31F34", "secondary": null, "default_mode": "dark" }, "global": { "fonts": { "chinese": { "enable": false, "family": "Smiley Sans", "url": "/fonts/fontscc.css" }, "english": { "enable": false, "family": "Smiley Sans", "url": "/fonts/fontscc.css" }, "title": { "enable": false, "family": null, "url": null } }, "content_max_width": "1000px", "sidebar_width": "210px", "hover": { "shadow": true, "scale": true }, "scroll_progress": { "bar": true, "percentage": true }, "website_counter": { "url": "https://cn.vercount.one/js", "enable": false, "site_pv": true, "site_uv": true, "post_pv": true }, "single_page": true, "preloader": true, "open_graph": { "enable": true, "image": "/images/cover-img/Blog_mutidevice.png", "description": "Welcome to Jason Yang's Blog!!! Hope you can find anything you want at here!" }, "google_analytics": { "enable": false, "id": null } }, "home_banner": { "enable": true, "style": "fixed", "image": { "light": "/images/wallhaven-wqery6-light.webp", "dark": "/images/wallhaven-wqery6-dark.webp" }, "title": "Jason Yang's Blog", "subtitle": { "text": ["Welcome to Jason Yang's Blog!!!", "Hope you can find anything you want at here!"], "hitokoto": { "enable": false, "show_author": false, "api": "https://v1.hitokoto.cn" }, "typing_speed": 100, "backing_speed": 80, "starting_delay": 500, "backing_delay": 1500, "loop": true, "smart_backspace": true }, "text_color": { "light": "#fff", "dark": "#d1d1b6" }, "text_style": { "title_size": "2.7rem", "subtitle_size": "1.3rem", "line_height": 1.2 }, "custom_font": { "enable": false, "family": "SiYuanSong-H", "url": "/fonts/fontscc.css" }, "social_links": { "enable": true, "style": "default", "links": { "github": "https://github.com/Jason-JP-Yang", "instagram": null, "zhihu": null, "twitter": null, "email": "jiepengyang@outlook.com", "bilibili": "https://space.bilibili.com/3493124315809839?spm_id_from=333.1007.0.0" }, "qrs": { "weixin": "/images/home_banner.social_links.qrs/weixin.jpg", "fa-brands fa-whatsapp": "/images/home_banner.social_links.qrs/whatsapp.jpg" } } }, "plugins": { "feed": { "enable": true, "type": ["atom", "rss2"], "path": ["/atom.xml", "/rss2.xml"], "limit": 0, "content": true, "autodiscovery": true, "order_by": "-date" }, "aplayer": { "enable": false, "type": "fixed", "audios": [{ "name": null, "artist": null, "url": null, "cover": null, "lrc": null }], "autoplay": true, "preload": "auto", "lrcType": 0, "mutex": true }, "mermaid": { "enable": true, "version": "9.3.0" } }, "version": "2.8.2", "navbar": { "auto_hide": false, "color": { "left": "#f78736", "right": "#367df7", "transparency": 35 }, "width": { "home": "1200px", "pages": "1000px" }, "links": { "Home": { "path": "/", "icon": "fa-regular fa-house" }, "Posts": { "icon": "fa-regular fa-file-lines", "submenus": { "Archives": "/archives", "Tags": "/tags", "Categories": "/categories", "Masonry": "/masonry/masonry-links" } }, "About": { "icon": "fa-regular fa-user", "submenus": { "Me": "/about", "Blog": "/", "Github": "https://github.com/Jason-JP-Yang", "Email": "mailto:admin@jason-yang.top" } }, "Links": { "icon": "fa-regular fa-link", "submenus": { "All Links 所有链接": "/links", "About me 关于我自己": "/about", "Masonry 瀑布流相册": "/masonry/masonry-links", "Updates Log 更新日志": "/updates", "Analytics 网站统计": "https://analytics.jason-yang.top/share/qTESQLk3w0sDu36F/blog.jason-yang.top" } } }, "search": { "enable": true, "preload": true } }, "page_templates": { "friends_column": 2, "tags_style": "blur" }, "home": { "sidebar": { "enable": true, "position": "left", "first_item": "menu", "announcement": null, "show_on_mobile": true, "links": { "Archives": { "path": "/archives", "icon": "fa-regular fa-archive" }, "Tags": { "path": "/tags", "icon": "fa-regular fa-tags" }, "Categories": { "path": "/categories", "icon": "fa-regular fa-folder" }, "About Me": { "path": "/about", "icon": "fa-regular fa-user" }, "All Links": { "path": "/links", "icon": "fa-regular fa-link" }, "Masonry": { "path": "/masonry/masonry-links", "icon": "fa-solid fa-image" }, "Updates Log": { "path": "/updates", "icon": "fa-solid fa-cloud-check" }, "Blog Analytics": { "path": "https://analytics.jason-yang.top/share/qTESQLk3w0sDu36F/blog.jason-yang.top", "icon": "fa-solid fa-chart-mixed" } } }, "article_date_format": "YYYY-MM-DD HH:mm:ss", "excerpt_length": 200, "categories": { "enable": true, "limit": 6 }, "tags": { "enable": true, "limit": 6 } }, "footerStart": "2023/12/23 11:58:38" };
     window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
     window.data = {"masonry":true};
   </script>
@@ -441,12 +441,6 @@
                                             </li>
                                         
                                             <li>
-                                                <a href="/discussion">
-                                                    DISCUSSION 讨论区
-                                                </a>
-                                            </li>
-                                        
-                                            <li>
                                                 <a href="/masonry/masonry-links">
                                                     MASONRY 瀑布流相册
                                                 </a>
@@ -457,7 +451,13 @@
                                                     UPDATES LOG 更新日志
                                                 </a>
                                             </li>
-                                        
+                                            
+                                            <li>
+                                                <a target="_blank" rel="noopener"
+                                                    href="https://analytics.jason-yang.top/share/qTESQLk3w0sDu36F/blog.jason-yang.top">
+                                                    ANALYTICS 网站统计
+                                                </a>
+                                            </li>
                                     </ul>
                                 
                             </li>
@@ -623,12 +623,7 @@
                                         <a class=" text-third-text-color text-xl"
                                            href="/about">ABOUT ME 关于我自己</a>
                                     </div>
-                                
-                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
-                                        <a class=" text-third-text-color text-xl"
-                                           href="/discussion">DISCUSSION 讨论区</a>
-                                    </div>
-                                
+
                                     <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
                                         <a class=" text-third-text-color text-xl"
                                            href="/masonry/masonry-links">MASONRY 瀑布流相册</a>
@@ -638,7 +633,12 @@
                                         <a class=" text-third-text-color text-xl"
                                            href="/updates">UPDATES LOG 更新日志</a>
                                     </div>
-                                
+                                    
+                                    <div
+                                        class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                        <a class=" text-third-text-color text-xl" target="_blank" rel="noopener"
+                                            href="https://analytics.jason-yang.top/share/qTESQLk3w0sDu36F/blog.jason-yang.top">ANALYTICS 网站统计</a>
+                                    </div>
                             </div>
                         
                     </li>
@@ -717,16 +717,14 @@
                         </a>
                     </li>
                 
-                    
                     <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
                         <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
-                           href="/discussion"
-                        >
-                            <span>Discussion</span>
-                            <i class="fa-regular fa-message-smile fa-sm fa-fw"></i>
+                            target="_blank" rel="noopener"
+                            href="https://analytics.jason-yang.top/share/qTESQLk3w0sDu36F/blog.jason-yang.top">
+                            <span>Blog Analytics</span>
+                            <i class="fa-solid fa-chart-mixed fa-sm fa-fw"></i>
                         </a>
                     </li>
-                
             
         </ul>
 

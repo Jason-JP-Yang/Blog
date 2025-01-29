@@ -98,7 +98,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: redefine
-all_minifier: false 
+all_minifier: true 
 mathjax:
   tags: none               # or 'ams' or 'all'
   single_dollars: true     # enable single dollar signs as in-line math delimiters
