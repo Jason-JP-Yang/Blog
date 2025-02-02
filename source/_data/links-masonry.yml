@@ -37,3 +37,22 @@
     description: 参访贵州省博物馆
     avatar: /images/redefine-avatar.svg
     thumbnail: /images/cover-img/贵州自然天文访问团 DAY5.jpg
+
+- links_category: 广州美丽风光
+  has_thumbnail: true
+  list: 
+  - name: 广州天河及珠江新城CBD摩天大楼
+    link: /masonry/广州天河及珠江新城CBD摩天大楼
+    description: 2024年中旬前往广州海珠及天河区CBD游玩
+    avatar: /images/redefine-avatar.svg
+    thumbnail: /masonry/广州美丽风光/IMG_20240402_164618.jpg
+  - name: 广州-广东省博物馆
+    link: /masonry/广州-广东省博物馆
+    description: 参观广东省博物馆 拍照记录些有名的文物
+    avatar: /images/redefine-avatar.svg
+    thumbnail: /masonry/广州美丽风光/IMG_20240402_095846_edit_77360227173090.jpg
+  - name: 广州越秀区：圣心大教堂、中山纪念堂、永庆街
+    link: /masonry/广州越秀区：圣心大教堂、中山纪念堂、永庆街
+    description: 2025春节前和班里的好朋友一起去广州玩 计划通一日游
+    avatar: /images/redefine-avatar.svg
+    thumbnail: /masonry/广州美丽风光/IMG_20250126_194951.jpg
