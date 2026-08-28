@@ -1,0 +1,272 @@
+{
+  "version": 1,
+  "generated_at": "2026-08-28T08:18:31Z",
+  "entries": [
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "A running error book for biology. Every question I have answered wrongly is filed here under its chapter, with the reasoning that repairs it and my original mi…",
+      "image": "",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2026-08-22T12:10:00Z",
+      "id": "post:2026/08/22/Biology-Error-Book",
+      "title": "Biology Error Book",
+      "url": "https://blog.jason-yang.top/2026/08/22/Biology-Error-Book/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "一套面向 Web 端的实时玻璃折射实现：表面法线取自距离场梯度，任意场经 |∇f| 归一化为度量场，深度权重由内切圆半径定义，采样端引入解析式 mip 预滤波。本文完整剖析其数学模型、着色器实现与距离场烘焙管线，并讨论其能力边界——尤其是背景纹理无法动态更新这一结构性限制。",
+      "image": "/images/cover-img/reimagined-glass.png",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2026-07-31T07:30:00Z",
+      "id": "post:2026/07/31/Reimagined-Glass",
+      "title": "Reimagined Glass：任意形状的实时玻璃折射",
+      "url": "https://blog.jason-yang.top/2026/07/31/Reimagined-Glass/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "一氧化二氢，远非其温和表象所示。本文以选择性事实与逻辑推演，深度揭露其作为全球性隐形杀手的多重身份：它是导致 drowning 的直接介质、金属锈蚀与地质灾害的关键推手、造成烫伤与冻伤的物理危害源，更是酸雨的核心成分与所有病原体的生存载体。更令人警觉的是，所有生命体都已对其产生无法戒断的生理依赖。",
+      "image": "images/cover-img/DHMO.jpg",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2026-02-25T12:45:29Z",
+      "id": "post:2026/02/25/Discuss harmfulness of H2O",
+      "title": "论一氧化二氢有多大的危害 看完你就知道了",
+      "url": "https://blog.jason-yang.top/2026/02/25/Discuss harmfulness of H2O/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "Mathjax 从入门到入土 | Introduction of MathJax rendering - inline math, display math, line breaks, equation numbering, matrices, tables, cases, and complex formulas.",
+      "image": "images\\cover-img\\mathjax-c.jpg",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2026-02-20T04:00:00Z",
+      "id": "post:2026/02/20/MathJax-Introduction",
+      "title": "Introduction to MathJax!",
+      "url": "https://blog.jason-yang.top/2026/02/20/MathJax-Introduction/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "Completely useless notes: every one of sin 1° through sin 90° written out in radicals. The constructible angles come out clean — sin 3° is a single nested squa…",
+      "image": "",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2026-02-19T15:04:10Z",
+      "id": "post:2026/02/19/Root Expression of Sin 1-90deg",
+      "title": "Root Expression of sin1° to sin90°",
+      "url": "https://blog.jason-yang.top/2026/02/19/Root Expression of Sin 1-90deg/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "The second vocabulary set, worked out of HKDSE past-paper reading passages and grouped by paper. Several hundred entries, each with its part of speech, a Chine…",
+      "image": "images/cover-img/en-vocab.jpg",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2024-10-03T12:57:00Z",
+      "id": "post:2024/10/03/Vocab-2",
+      "title": "English Vocabulary Collection 2",
+      "url": "https://blog.jason-yang.top/2024/10/03/Vocab-2/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "前往中环金钟的城展馆领取「城市景观摄影比赛」的优异奖——一张奖状与 500 元礼券。展览设在四楼，主办方把参赛作品印得极大且清晰，于是在自己的照片前留了影；随后细看公开组的获奖作品，从构图、色彩到画面的故事感都远在意料之外，一并记下路上遇见的那栋造型奇特的大楼。",
+      "image": "images/cover-img/城展馆.png",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2024-09-28T05:00:00Z",
+      "id": "post:2024/09/28/游览城展馆",
+      "title": "2024/09/28 游览城展馆",
+      "url": "https://blog.jason-yang.top/2024/09/28/游览城展馆/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "素材第四辑【目标 & 意志】：自王勃「穷且益坚，不坠青云之志」起，分「形容目标志向」与「形容为目标努力」两路铺开成语表——鸿鹄之志、蹈厉之志、衔石填海、锲而不舍——每一类附作文构思，并以周恩来、司马迁、陈涉为例给出可直接套用的论证示例。",
+      "image": "images/cover-img/好词好句摘录 50 - 85.png",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2024-07-30T00:00:00Z",
+      "id": "post:2024/07/30/好词好句摘录 50 - 85",
+      "title": "好词好句摘录 50-85 【目标&意志】",
+      "url": "https://blog.jason-yang.top/2024/07/30/好词好句摘录 50 - 85/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "素材第三辑【旅行 & 自然】：按「描写旅行过程与感受」「形容旅行见闻」等类目铺开的成语表——沐露梳风、乘桴浮海、探奇穷异、千岩竞秀——生僻处逐条附释义，每一类再跟上作文构思与一整段写景示例，供游记与状物类命题取用。",
+      "image": "images/cover-img/好词好句摘录 21 - 49.png",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2024-07-27T00:00:00Z",
+      "id": "post:2024/07/27/好词好句摘录 21 - 49",
+      "title": "好词好句摘录 21 - 49 【旅行&自然】",
+      "url": "https://blog.jason-yang.top/2024/07/27/好词好句摘录 21 - 49/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "A command-line Tic-Tac-Toe in Python whose whole game — the board, the input handling and the computer's choice of move — fits in sixty-five lines once the cod…",
+      "image": "images/cover-img/Python_background_01.svg",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2024-07-24T00:00:00Z",
+      "id": "post:2024/07/24/Tic_Tae_Toe VS Computer",
+      "title": "Python Programs: 井字棋AI Tic_Tae_Toe VS Computer",
+      "url": "https://blog.jason-yang.top/2024/07/24/Tic_Tae_Toe VS Computer/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "字蛛（font-spider）解析页面实际用到的字形，删掉其余的字形数据，把动辄二十余兆的开源中文字体压到可以真正上线的体积。本文记录它的安装与国内镜像源配置、woff2/woff/eot/svg 的生成能力，以及一条绕不开的限制——由 JavaScript 动态插入的元素与样式，它看不见。",
+      "image": "images/cover-img/NodeJS_background_01.svg",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2024-07-21T00:00:00Z",
+      "id": "post:2024/07/21/Useful NodeJS Package_Font Spider 字蛛",
+      "title": "Useful NodeJS Package: Font Spider 字蛛",
+      "url": "https://blog.jason-yang.top/2024/07/21/Useful NodeJS Package_Font Spider 字蛛/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "议论文素材第二辑：延续同一体例的名句摘录，每则标注适用主题、出处，并附一段可直接拆用的作文示例，覆盖离别与重逢、脚踏实地、厚积薄发等常见命题方向。",
+      "image": "images/cover-img/好词好句摘录 11 - 20.png",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2024-07-19T00:00:00Z",
+      "id": "post:2024/07/19/好词好句摘录 11 - 20",
+      "title": "好词好句摘录 11-20",
+      "url": "https://blog.jason-yang.top/2024/07/19/好词好句摘录 11 - 20/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "议论文素材第一辑：十则名句摘录，每则都配齐适用主题、出处与整段作文示例——林清玄由离别写重逢的喜悦，李延寿以「良玉未剖，与瓦石同类」喻实践先于空想，钱锺书则说天下没有偶然，那不过是化了妆、戴了面具的必然。",
+      "image": "images/cover-img/好词好句摘录 01 - 10.png",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2024-07-15T00:00:00Z",
+      "id": "post:2024/07/15/好词好句摘录 01 - 10",
+      "title": "好词好句摘录 01-10",
+      "url": "https://blog.jason-yang.top/2024/07/15/好词好句摘录 01 - 10/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "行程最后两日。西江千户苗寨依山势层叠而上的千余栋木质吊脚楼、五座兼作关风蓄气的风雨桥，以及苗家以壶碗灌酒待客的礼俗；再至贵州省博物馆——1953 年筹建、2013 年迁入新馆，八万余件藏品里中国苗族服饰库与银饰库均居全国之首，另记银饰工艺与碑帖书法两处展陈的观看所得。",
+      "image": "images/cover-img/贵州自然天文访问团 DAY4.jpg",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2024-06-29T00:00:00Z",
+      "id": "post:2024/06/29/贵州自然天文访问团 DAY4-5",
+      "title": "贵州自然天文访问团 DAY4 - 5",
+      "url": "https://blog.jason-yang.top/2024/06/29/贵州自然天文访问团 DAY4-5/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "中国天眼天文馆的一整天学习笔记：从中国古代的天文成就与世界三大射电望远镜说起，记下中国 VLBI 网的构成，再拆解 FAST 的四项独门绝技——500 米口径、观测时于球冠反射面上实时形变出的 300 米瞬时抛物面、七千余根钢缆编织且处处要求毫米级精度的索网，以及由此换来的灵敏度。末篇延伸至脉冲星、引力波与伽玛射线暴…",
+      "image": "images/posts/中国天眼.png",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2024-06-28T00:00:00Z",
+      "id": "post:2024/06/28/贵州自然天文访问团 DAY3",
+      "title": "贵州自然天文访问团 DAY3",
+      "url": "https://blog.jason-yang.top/2024/06/28/贵州自然天文访问团 DAY3/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "第二日自贵州大学始。张明教授的讲座把苗族的五次大迁徙、二百余个支系与东中西部各异的自称（仡熊、嘎闹、蒙）一并铺开，校园与那座上层做 3D 打印、下层是古色书屋的图书馆则是另一种古今并置。下午转入建于明洪武年间的青岩古镇：近三十座明清庙宇祠堂、以糯米浆与桐油砌就的背街石巷，以及作为非物质文化遗产、以蓝靛为底的苗族蜡染。",
+      "image": "images/cover-img/贵州自然天文访问团 DAY2.jpg",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2024-06-27T00:00:00Z",
+      "id": "post:2024/06/27/贵州自然天文访问团 DAY2",
+      "title": "贵州自然天文访问团 DAY2",
+      "url": "https://blog.jason-yang.top/2024/06/27/贵州自然天文访问团 DAY2/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "行程首日，大半时间在高铁上度过：窗外是桂林拔地而起的喀斯特峰林，站台边则是老式内燃机车与复兴号并置的一幕。落地后梳理贵州的地理区位、亚热带湿润季风气候与那片被称作「地球生命演化宝库」的古生物地层，再详记甲秀楼——始建于明万历二十五年、四百年间六度重修的三层三檐四角攒尖顶阁楼，及其与浮玉桥、涵碧亭共同构成的「城南遗迹」。",
+      "image": "images/cover-img/贵州自然天文访问团 DAY1.jpg",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2024-06-26T00:00:00Z",
+      "id": "post:2024/06/26/贵州自然天文访问团 DAY1",
+      "title": "贵州自然天文访问团 DAY1",
+      "url": "https://blog.jason-yang.top/2024/06/26/贵州自然天文访问团 DAY1/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "The first vocabulary set, gathered while reading English news and opinion writing: phrases, nouns and adjectives laid out with their part of speech and a Chine…",
+      "image": "images/cover-img/en-vocab.jpg",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2024-02-09T00:38:00Z",
+      "id": "post:2024/02/09/Vocab-1",
+      "title": "English Vocabulary Collection 1",
+      "url": "https://blog.jason-yang.top/2024/02/09/Vocab-1/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "The first post on this blog, and the one Hexo writes for you. It is kept as it arrived: the four commands the whole site runs on — new, server, generate, deplo…",
+      "image": "images/cover-img/Blog_screenshot.png",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2023-12-23T01:00:00Z",
+      "id": "post:2023/12/23/hello-world",
+      "title": "My First Blog: Hello World",
+      "url": "https://blog.jason-yang.top/2023/12/23/hello-world/"
+    }
+  ]
+}

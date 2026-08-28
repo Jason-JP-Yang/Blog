@@ -1,0 +1,18 @@
+{
+  "name": "Jason Yang's Blog",
+  "short_name": "Jason Yang's",
+  "description": "Hope You Can Find Anything You Want At Here!!! Welcome to visit by blog site. Main categories includes programming, study notes, techonolgy, variable reading articles",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#A31F34",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "https://blog.jason-yang.top/images/icon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
