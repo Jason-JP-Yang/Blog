@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-09-01T07:00:05Z",
+  "generated_at": "2026-09-01T07:59:34Z",
   "entries": [
     {
       "type": "post",
@@ -48,7 +48,7 @@
       "type": "post",
       "topic": "posts",
       "body": "Mathjax 从入门到入土 | Introduction of MathJax rendering - inline math, display math, line breaks, equation numbering, matrices, tables, cases, and complex formulas.",
-      "image": "images\\cover-img\\mathjax-c.jpg",
+      "image": "images/cover-img/mathjax-c.jpg",
       "tag": "posts",
       "audience": {
         "kind": "topic"
