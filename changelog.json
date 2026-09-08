@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "generated_at": "2026-09-08T09:24:33Z",
+  "generated_at": "2026-09-08T13:57:23Z",
   "entries": [
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "A running error book for physics. Every question I have answered wrongly is filed here under its chapter, with the working that repairs it and my original mist…",
+      "image": "",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2026-09-08T12:40:00Z",
+      "id": "post:2026/09/08/Physics-Error-Book",
+      "title": "Physics Error Book",
+      "url": "https://blog.jason-yang.top/2026/09/08/Physics-Error-Book/"
+    },
     {
       "type": "post",
       "topic": "posts",
