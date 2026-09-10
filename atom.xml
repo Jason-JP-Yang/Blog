@@ -174,9 +174,9 @@
     <category term="Mathematics" scheme="https://blog.jason-yang.top/categories/Study-Notes/Mathematics/"/>
     
     
-    <category term="Mathematics" scheme="https://blog.jason-yang.top/tags/Mathematics/"/>
-    
     <category term="Witty Nothings" scheme="https://blog.jason-yang.top/tags/Witty-Nothings/"/>
+    
+    <category term="Mathematics" scheme="https://blog.jason-yang.top/tags/Mathematics/"/>
     
     <category term="Formulae" scheme="https://blog.jason-yang.top/tags/Formulae/"/>
     
@@ -446,8 +446,6 @@
     <category term="贵州自然天文访问团" scheme="https://blog.jason-yang.top/categories/Daily-Life/%E8%B4%B5%E5%B7%9E%E8%87%AA%E7%84%B6%E5%A4%A9%E6%96%87%E8%AE%BF%E9%97%AE%E5%9B%A2/"/>
     
     
-    <category term="Astronomy" scheme="https://blog.jason-yang.top/tags/Astronomy/"/>
-    
     <category term="Science" scheme="https://blog.jason-yang.top/tags/Science/"/>
     
     <category term="Gui Zhou" scheme="https://blog.jason-yang.top/tags/Gui-Zhou/"/>
@@ -457,6 +455,8 @@
     <category term="History" scheme="https://blog.jason-yang.top/tags/History/"/>
     
     <category term="Geography" scheme="https://blog.jason-yang.top/tags/Geography/"/>
+    
+    <category term="Astronomy" scheme="https://blog.jason-yang.top/tags/Astronomy/"/>
     
   </entry>
   
