@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-09-14T15:57:10Z",
+  "generated_at": "2026-09-15T09:46:17Z",
   "entries": [
     {
       "type": "post",
@@ -43,6 +43,20 @@
       "id": "post:2026/07/31/Reimagined-Glass",
       "title": "Reimagined Glass：任意形状的实时玻璃折射",
       "url": "https://blog.jason-yang.top/2026/07/31/Reimagined-Glass/"
+    },
+    {
+      "type": "post",
+      "topic": "posts",
+      "body": "A collection of programs of CASIO fx-50FHII that are useful for HKDSE Core Mathematics or Mathematics Extended Module 2. There are also some special techniques…",
+      "image": "/images/cover-img/calculator.png",
+      "tag": "posts",
+      "audience": {
+        "kind": "topic"
+      },
+      "published_at": "2026-03-20T11:39:36Z",
+      "id": "post:2026/03/20/Calculator-Program-Sets",
+      "title": "CASIO-FX-50FHii Programs Sets",
+      "url": "https://blog.jason-yang.top/2026/03/20/Calculator-Program-Sets/"
     },
     {
       "type": "post",
