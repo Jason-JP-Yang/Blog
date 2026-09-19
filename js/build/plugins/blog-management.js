@@ -64,7 +64,7 @@ import{setBusy as n,confirmStep as s,disarmConfirm as a,timeAgo as i,escapeHTML 
 
     <ul class="bm-post-list"></ul>`}function canGrant(e){return!!(e.published&&e.encrypted&&e.vaultId)}function postRowHTML(a){var i=a.date?new Date(a.date):null,s=(q.posts.audiences[a.vaultId]||[]).length,n=canGrant(a),l=[],r=(i&&l.push(`<span><i class="fa-solid fa-calendars"></i>${i.toISOString().slice(0,10)}</span>`),(a.categories||[]).length&&l.push(`<span><i class="fa-solid fa-folders"></i>${o(a.categories.join(" / "))}</span>`),(a.tags||[]).length&&l.push(`<span><i class="fa-solid fa-tags"></i>${o(a.tags.join(", "))}</span>`),a.slug&&l.push(`<span class="bm-post-slug"><i class="fa-solid fa-link"></i>${o(a.slug)}</span>`),i=[],(r=a).sticky&&i.push(["sticky","fa-thumbtack",t("p_sticky","Sticky")]),"album"===r.kind&&i.push(["album","fa-images",t("p_album","Album")]),r.encrypted&&i.push(["encrypted","fa-lock-keyhole",t("v_badge","Encrypted")]),r.draft&&i.push(["draft","fa-pen-nib",t("p_draft","Draft")]),r.published||i.push(["unpublished","fa-eye-slash",t("p_unpublished_tag","Unpublished")]),i.map(([e,t,a])=>`<span class="bm-bubble is-${e}"><i class="fa-regular ${t}" aria-hidden="true"></i>${o(a)}</span>`).join("")),i=n?`<span class="bm-bubble is-readers" data-empty="${s?"0":"1"}">
          <i class="fa-regular fa-user-lock" aria-hidden="true"></i>
-         ${q.posts.loading?'<i class="fa-solid fa-circle-notch fa-spin" aria-hidden="true"></i>':`<strong>${s}</strong>`+o(t(1===s?"v_reader":"v_readers","readers"))}</span>`:"",s=q.posts.queue.includes(a.key),d=canCommit()?`<a class="bm-quiet bm-post-edit" href="${o((e=>(e=(e.draft||e).href)+(e.indexOf("#")<0?"#edit":""))(a))}">
+         ${q.posts.loading?'<i class="fa-solid fa-circle-notch fa-spin" aria-hidden="true"></i>':`<strong>${s}</strong>`+o(t(1===s?"v_reader":"v_readers","readers"))}</span>`:"",s=q.posts.queue.includes(a.key),d=canCommit()?`<a class="bm-quiet bm-post-edit" href="${o((e=>(e=e.href)+(e.indexOf("#")<0?"#edit":""))(a))}">
          <i class="fa-solid fa-pen" aria-hidden="true"></i>
          <span class="np-btn-label">${e("edit","Edit")}</span></a>
        `+(a.published?`<button type="button" class="bm-quiet bm-danger bm-post-unpublish${s?" is-on":""}">
@@ -74,7 +74,7 @@ import{setBusy as n,confirmStep as s,disarmConfirm as a,timeAgo as i,escapeHTML 
       <div class="bm-post-main">
         <div class="bm-post-title">
           <i class="fa-solid ${"album"===a.kind?"fa-images":a.encrypted?"fa-lock-keyhole":"fa-file-lines"}" aria-hidden="true"></i>
-          <a href="${o(a.href)}" target="_blank" rel="noopener">${o(a.title||t("p_untitled","Untitled"))}</a>
+          <a href="${o(a.href)}">${o(a.title||t("p_untitled","Untitled"))}</a>
         </div>
         <div class="bm-post-meta">${l.join("")}</div>
         ${a.excerpt?`<p class="bm-post-excerpt">${o(a.excerpt)}</p>`:""}
