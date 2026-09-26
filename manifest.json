@@ -1,7 +1,9 @@
 {
+  "id": "/",
   "name": "Jason Yang's Blog",
-  "short_name": "Jason Yang's",
+  "short_name": "Jason Yang's Blog",
   "description": "Hope You Can Find Anything You Want At Here!!! Welcome to visit by blog site. Main categories includes programming, study notes, techonolgy, variable reading articles",
+  "lang": "en",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -9,10 +11,28 @@
   "background_color": "#ffffff",
   "icons": [
     {
-      "src": "https://blog.jason-yang.top/images/icon.png",
-      "sizes": "any",
+      "src": "/build/pwa/icon-192.png",
+      "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "/build/pwa/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/build/pwa/maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/build/pwa/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
