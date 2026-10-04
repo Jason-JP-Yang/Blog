@@ -1,0 +1,1 @@
+let widget=null;function init(){widget?widget.then(t=>t.init()):document.querySelector(".giscus[data-giscus]")&&(widget=import("./giscus-widget.js").then(t=>(t.init(),t)))}document.addEventListener("DOMContentLoaded",init);try{swup.hooks.on("page:view",init)}catch(t){}
